@@ -11,6 +11,8 @@
       gtag('config', 'UA-135670334-1');
     </script>
 
+    <link rel="stylesheet" type="text/css" href="portal.css">
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,34 +46,32 @@
   <body style="font-family: futura; color: #152877">
     <div class="container-fluid">
 
-
-      <div class="row pt-3 pb-2 px-2">
-        <div class="col-10 d-flex justify-content-start align-items-center">
-          <div class="d-flex justify-content-around">
-              <i class="far fa-building fa-2x"></i>
-              <a href="index.html" style="text-decoration: none"><h3 class="pl-2" style="font-size: 180%; font-weight: bold; color: #152877">Vermieterportal</h3></a>
-            </div>
+      <div class="row py-3 px-2 fixed-top" style="background-color: #ffffff">
+        <div class="col d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-around align-items-center">
+            <i class="far fa-building fa-2x pr-2"></i>
+            <a href="index.html" id="title">Vermieterportal</a>
           </div>
-          <div class="col d-flex align-items-center">
-            <!-- <div style="font-size: 120%; font-weight: bold">Coming soon ...</div> -->
-          </div>
+          <a href="#pricing" role="button" class="btn" style="background-color: #152877; color: #ffffff">Mehr erfahren</a>
         </div>
       </div>
 
+      <div class="row" style="height: 4rem"></div>
+
       <div class="row">
-        <div class="col">
+        <div class="col px-0">
           <img src="markus-spiske-1192711-unsplash_c.jpg" class="img-fluid px-0" alt="City View">
           <div class="carousel-caption d-none d-md-block" style="color: #152877; top: 0; bottom: auto">
-            <h1 style="border-radius: 13px; font-weight: bold;">Die einfache Lösung <br> zur Verwaltung Ihrer Immobilien</h1>
-            <a href="#pricing" role="button" class="btn btn-lg mt-3" style="background-color: #152877; color: #ffffff">Mehr erfahren</a>
+            <h1 style="font-weight: bold;">Die einfache Lösung <br> zur Verwaltung Ihrer Immobilien</h1>
+            <!-- <a href="#pricing" role="button" class="btn btn-lg mt-3" style="background-color: #152877; color: #ffffff">Mehr erfahren</a> -->
           </div>
         </div>
       </div>
 
       <div class="row pt-4">
         <div class="col-10 offset-1 d-md-none text-center">
-            <h3 style="border-radius: 13px; font-weight: bold;">Die einfache Lösung<br>zur Verwaltung Ihrer Immobilien</h3>
-            <a href="#pricing" role="button" class="btn btn-lg mt-3" style="background-color: #152877; color: #ffffff">Mehr erfahren</a>
+            <h3 style="font-weight: bold;">Die einfache Lösung<br>zur Verwaltung Ihrer Immobilien</h3>
+            <!-- <a href="#pricing" role="button" class="btn btn-lg mt-3" style="background-color: #152877; color: #ffffff">Mehr erfahren</a> -->
           </div>
         </div>
       <div>
@@ -79,10 +79,16 @@
       <div class="row pt-4 pb-2">
         <div class="col-10 pt-4 order-last pt-md-0 order-md-first col-md-3 offset-1 d-flex justify-content-center align-items-center">
           <h3 class="text-center d-none d-md-block">Mit dem Dashboard behalten Sie den Überblick</h3>
-          <h4 class="text-center d-md-none">Mit dem Dashboard behalten Sie den Überblick</h3>
+          <h4 class="text-center d-md-none">Mit dem Dashboard behalten Sie den Überblick</h4>
         </div>
         <div class="col-10 offset-1 col-md-6">
           <img class="img-fluid shadow" src="demo_screen.jpeg" alt="Dashboard">
+        </div>
+      </div>
+
+      <div class="row pt-4">
+        <div class="col-4 offset-4">
+          <div class="dropdown-divider"></div>
         </div>
       </div>
 
@@ -94,48 +100,52 @@
         </div>
       </div>
 
+
       <div class="row py-4 shadow" style="background-color: #f6f6f6">
         <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
           <i class="pb-4 fas fa-search-dollar fa-5x"></i>
           <h4 class="px-4 text-center">Bankanbindung</h4>
-          <p class="px-4 text-center" style="font-size: 90%; color: #606a96">
+          <p class="px-4 text-center feature-text">
             Mit einer sicheren Verbindung zu Ihrem Online-Banking können alle relevanten Zahlungsströme synchronisiert werden. So werden Mieteinnahmen und Ausgaben automatisch kategorisiert und Ihren Einheiten zugeordnet.
           </p>
         </div>
         <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
           <i class="pb-4 far fa-file-alt fa-5x"></i>
           <h4 class="px-4 text-center">Dokumentverwaltung</h4>
-          <p class="px-4 text-center" style="font-size: 90%; color: #606a96">
+          <p class="px-4 text-center feature-text">
             Sie Ihre Mietverträge, Übergabeprotokolle, Fotos, Rechnungen und weitere Dokumente hochladen und sortieren. Über Ihr Smartphone können Sie auch analoge Dokumente einfach scannen und zuordnen. Damit haben Sie stets alle Informationen zur Verfügung.
           </p>
         </div>
         <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
           <i class="pb-4 far fa-bell fa-5x"></i>
           <h4 class="px-4 text-center">Benachrichtigungen</h4>
-          <p class="px-4 text-center" style="font-size: 90%; color: #606a96">
+          <p class="px-4 text-center feature-text">
             Wir informieren Sie gerne wenn eine Miete nicht gezahlt wurde oder wenn der nächste Termin für die Aufzugswartung, Rauchmelderprüfung, Vertragskündigung etc. ansteht. So entgehen Ihnen keine wichtigen To-dos.
           </p>
         </div>
         <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
           <i class="pb-4 fas fa-tachometer-alt fa-5x"></i>
           <h4 class="px-4 text-center">Dashboard</h4>
-          <p class="px-4 text-center" style="font-size: 90%; color: #606a96">
+          <p class="px-4 text-center feature-text">
             Hier haben Sie alle wichtigen Informationen an einem Ort - Auswertungen der Zahlungsströme, Ihre Rendite und weitere Kennzahlen. Damit behalten Sie stets den Überblick zu Ihren Immobilien.
           </p>
         </div>
         <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
           <i class="pb-4 fas fa-cash-register fa-5x"></i>
           <h4 class="px-4 text-center">Betriebskostenabrechnung</h4>
-          <p class="px-4 text-center" style="font-size: 90%; color: #606a96">
+          <p class="px-4 text-center feature-text">
             Wir unterstützen Sie bei der Abrechnung mit einer automatischen Zuordnung von relevanten Zahlungen und einer Übersicht zu fehlenden Informationen. Sie sparen Zeit und vermeiden Fehler.
           </p>
         </div>
         <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
           <i class="pb-4 far fa-user fa-5x"></i>
           <h4 class="px-4 text-center">Digitaler Concierge</h4>
-          <p class="px-4 text-center" style="font-size: 90%; color: #606a96">Unser digitaler Concierge beantwortet Ihnen alle Fragen rund um die Verwaltung Ihrer Immobilien. Darüber hinaus stellt er rechtssichere Vorlagen für Mietverträge und Anschreiben zur Verfügung.<p>
+          <p class="px-4 text-center feature-text">
+            Unser digitaler Concierge beantwortet Ihnen alle Fragen rund um die Verwaltung Ihrer Immobilien. Darüber hinaus stellt er rechtssichere Vorlagen für Mietverträge und Anschreiben zur Verfügung.
+          </p>
         </div>
       </div>
+
 
       <div class="row pt-5">
         <div class="col-8 d-flex flex-column offset-2 align-items-center">
@@ -159,12 +169,12 @@
                 <span style="font-size: 240%;">1€</span><span style="font-size: 80%">/Mo</span>
               </div>
               <div class="d-flex flex-column">
-                <span style="color: #000000"><i class="pr-1 far fa-check-circle" style="color: #249d3c"></i>Bankanbindung</span>
-                <span style="color: #000000"><i class="pr-1 far fa-check-circle" style="color: #249d3c"></i>Dashboard</span>
-                <span style="color: #999999"><i class="pr-1 far fa-circle"></i>Dokumentenverwaltung</span>
-                <span style="color: #999999"><i class="pr-1 far fa-circle"></i>Benachrichtungen</span>
-                <span style="color: #999999"><i class="pr-1 far fa-circle"></i>Betriebskostenabrechnung</span>
-                <span style="color: #999999"><i class="pr-1 far fa-circle"></i>Digitaler Concierge</span>
+                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Bankanbindung</span></div>
+                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dashboard</span></div>
+                <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Dokumentenverwaltung</span></div>
+                <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Benachrichtungen</span></div>
+                <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Betriebskostenabrechnung</span></div>
+                <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Digitaler Concierge</span></div>
               </div>
               <p></p>
               <button type="button" class="btn" id="testbutton-1" style="background-color: #10B201; color: #ffffff">30 Tage<br>kostenlos nutzen!</button>
@@ -184,12 +194,12 @@
                 <span style="font-size: 240%;">2,50€</span><span style="font-size: 80%">/Mo</span>
               </div>
               <div class="d-flex flex-column">
-                <span style="color: #000000"><i class="pr-1 far fa-check-circle" style="color: #249d3c"></i>Bankanbindung</span>
-                <span style="color: #000000"><i class="pr-1 far fa-check-circle" style="color: #249d3c"></i>Dashboard</span>
-                <span style="color: #000000"><i class="pr-1 far fa-check-circle" style="color: #249d3c"></i>Dokumentenverwaltung</span>
-                <span style="color: #000000"><i class="pr-1 far fa-check-circle" style="color: #249d3c"></i>Benachrichtigungen</span>
-                <span style="color: #999999"><i class="pr-1 far fa-circle"></i>Betriebskostenabrechnung</span>
-                <span style="color: #999999"><i class="pr-1 far fa-circle"></i>Digitaler Concierge</span>
+                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Bankanbindung</span></div>
+                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dashboard</span></div>
+                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dokumentenverwaltung</span></div>
+                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Benachrichtigungen</span></div>
+                <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Betriebskostenabrechnung</span></div>
+                <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Digitaler Concierge</span></div>
               </div>
               <p></p>
               <button type="button" class="btn" id="testbutton-2" style="background-color: #10B201; color: #ffffff">30 Tage<br>kostenlos nutzen!</button>
@@ -208,12 +218,12 @@
                 <span style="font-size: 240%;">5€</span><span style="font-size: 80%">/Mo</span>
               </div>
               <div class="d-flex flex-column">
-                <span style="color: #000000"><i class="pr-1 far fa-check-circle" style="color: #249d3c"></i>Bankanbindung</span>
-                <span style="color: #000000"><i class="pr-1 far fa-check-circle" style="color: #249d3c"></i>Dashboard</span>
-                <span style="color: #000000"><i class="pr-1 far fa-check-circle" style="color: #249d3c"></i>Dokumentenverwaltung</span>
-                <span style="color: #000000"><i class="pr-1 far fa-check-circle" style="color: #249d3c"></i>Benachrichtigungen</span>
-                <span style="color: #000000"><i class="pr-1 far fa-check-circle" style="color: #249d3c"></i>Betriebskostenabrechnung</span>
-                <span style="color: #000000"><i class="pr-1 far fa-check-circle" style="color: #249d3c"></i>Digitaler Concierge</span>
+                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Bankanbindung</span></div>
+                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dashboard</span></div>
+                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dokumentenverwaltung</span></div>
+                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Benachrichtigungen</span></div>
+                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Betriebskostenabrechnung</span></div>
+                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Digitaler Concierge</span></div>
               </div>
               <p></p>
               <button type="button" class="btn" id="testbutton-3" style="background-color: #10B201; color: #ffffff">30 Tage<br>kostenlos nutzen!</button>
@@ -273,6 +283,8 @@
     <script type="text/javascript">         
       $(document).ready(function() {
 
+        // Set the prices with a 50/50 chance fot both sets
+
         // $('#anmelden').on('click', function(event) {
         //   var formData = {
         //     'mail': $('input[name=email]').val(),
@@ -298,7 +310,7 @@
         // });
 
         $('#testbutton-1').on('click', function(event) {
-          $ajax.({
+          $.ajax({
             type: 'POST',
             url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/prod/counter',
             data: JSON.stringify(buttonData),
@@ -316,6 +328,5 @@
         });
       });
     </script>
-
   </body>
 </html>

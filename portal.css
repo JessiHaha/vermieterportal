@@ -1,0 +1,27 @@
+#title {
+    font-size: 180%;
+    font-weight: bold;
+    color: #152877;
+    text-decoration: none;
+}
+
+.feature-text {
+    font-size: 90%;
+    color: #606a96;
+}
+
+.fa-check-circle {
+    color: #249d3c;
+}
+
+.fa-circle {
+    color: #bbbbbb;
+}
+
+.checked {
+    color: #000000;
+}
+
+.unchecked {
+    color: #bbbbbb;
+}
