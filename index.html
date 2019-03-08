@@ -11,7 +11,7 @@
       gtag('config', 'UA-135670334-1');
     </script>
 
-    <link rel="stylesheet" type="text/css" href="portal.css">
+    <!-- <link rel="stylesheet" type="text/css" href="portal.css"> -->
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/regular.css" integrity="sha384-IG162Tfx2WTn//TRUi9ahZHsz47lNKzYOp0b6Vv8qltVlPkub2yj9TVwzNck6GEF" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="portal.css">
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -166,7 +168,7 @@
               <p class="card-text">Some quick example text on the card</p> -->
               <div class="pb-0" style="font-size: 80%">je Einheit</div>
               <div>
-                <span style="font-size: 240%;">1€</span><span style="font-size: 80%">/Mo</span>
+                <span class="price" id="price-tag-0">1</span><span class="price">€</span><span style="font-size: 80%">/Mo</span>
               </div>
               <div class="d-flex flex-column">
                 <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Bankanbindung</span></div>
@@ -177,7 +179,7 @@
                 <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Digitaler Concierge</span></div>
               </div>
               <p></p>
-              <button type="button" class="btn" id="testbutton-1" style="background-color: #10B201; color: #ffffff">30 Tage<br>kostenlos nutzen!</button>
+              <button type="button" class="btn anmelden" id="testbutton-0">30 Tage<br>kostenlos nutzen!</button>
             </div>
           </div>
         </div>
@@ -191,7 +193,7 @@
               <p class="card-text">Some quick example text on the card</p> -->
               <div>
                 <div class="pb-0" style="font-size: 80%">je Einheit</div>
-                <span style="font-size: 240%;">2,50€</span><span style="font-size: 80%">/Mo</span>
+                <span class="price" id="price-tag-1">2,50</span><span class="price">€</span><span style="font-size: 80%">/Mo</span>
               </div>
               <div class="d-flex flex-column">
                 <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Bankanbindung</span></div>
@@ -202,7 +204,7 @@
                 <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Digitaler Concierge</span></div>
               </div>
               <p></p>
-              <button type="button" class="btn" id="testbutton-2" style="background-color: #10B201; color: #ffffff">30 Tage<br>kostenlos nutzen!</button>
+              <button type="button" class="btn anmelden" id="testbutton-1">30 Tage<br>kostenlos nutzen!</button>
             </div>
           </div>
         </div>
@@ -215,7 +217,7 @@
               <p class="card-text">Some quick example text on the card</p> -->
               <div>
                 <div class="pb-0" style="font-size: 80%">je Einheit</div>
-                <span style="font-size: 240%;">5€</span><span style="font-size: 80%">/Mo</span>
+                <span class="price" id="price-tag-2">5</span><span class="price">€</span><span style="font-size: 80%">/Mo</span>
               </div>
               <div class="d-flex flex-column">
                 <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Bankanbindung</span></div>
@@ -226,7 +228,7 @@
                 <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Digitaler Concierge</span></div>
               </div>
               <p></p>
-              <button type="button" class="btn" id="testbutton-3" style="background-color: #10B201; color: #ffffff">30 Tage<br>kostenlos nutzen!</button>
+              <button type="button" class="btn anmelden" id="testbutton-2">30 Tage<br>kostenlos nutzen!</button>
             </div>
           </div>
         </div>
@@ -284,6 +286,16 @@
       $(document).ready(function() {
 
         // Set the prices with a 50/50 chance fot both sets
+        
+        if (Math.random() >= 0.5) {
+          var prices = [0, 0.5, 1];
+        } else {
+          var prices = [1, 2.5, 5];
+        }
+
+        for (i = 0; i < prices.length; i++) { 
+          $('#price-tag-' + i).text(prices[i]);
+        }
 
         // $('#anmelden').on('click', function(event) {
         //   var formData = {

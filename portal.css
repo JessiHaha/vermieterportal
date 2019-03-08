@@ -15,7 +15,7 @@
 }
 
 .fa-circle {
-    color: #bbbbbb;
+    color: #94979b;
 }
 
 .checked {
@@ -23,5 +23,14 @@
 }
 
 .unchecked {
-    color: #bbbbbb;
+    color: #94979b;
+}
+
+.anmelden {
+    color: #ffffff;
+    background-color: #10B201;
+}
+
+.price {
+    font-size: 240%;
 }
