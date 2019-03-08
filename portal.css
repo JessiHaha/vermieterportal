@@ -5,6 +5,12 @@
     text-decoration: none;
 }
 
+.carousel-caption {
+    color: #152877;
+    top: 0;
+    bottom: auto;
+}
+
 .feature-text {
     font-size: 90%;
     color: #606a96;
@@ -33,4 +39,8 @@
 
 .price {
     font-size: 240%;
+}
+
+.price-info {
+    font-size: 80%;
 }
