@@ -43,20 +43,20 @@
 
     <title>Vermieterportal</title>
   </head>
-  <body style="font-family: futura; color: #152877">
+  <body>
     <div class="container-fluid">
 
-      <div class="row py-3 px-2 fixed-top" style="background-color: #ffffff">
+      <div class="row py-1 px-2 fixed-top" style="background-color: #ffffff">
         <div class="col d-flex justify-content-between align-items-center">
           <div class="d-flex justify-content-around align-items-center">
             <i class="far fa-building fa-2x pr-2"></i>
             <a href="index.html" id="title">Vermieterportal</a>
           </div>
-          <a href="#pricing" role="button" class="btn" style="background-color: #152877; color: #ffffff">Mehr erfahren</a>
+          <a href="#pricing" role="button" class="btn btn-sm" style="background-color: #152877; color: #ffffff">Pakete</a>
         </div>
       </div>
 
-      <div class="row" style="height: 4rem"></div>
+      <div class="row" style="height: 2rem"></div>
 
       <div class="row">
         <div class="col px-0">
@@ -157,8 +157,8 @@
       </div>
 
 
-      <div class="row p-4 justify-content-center" id="pricing">
-        <div class="col-10 col-sm-8 col-lg-3 mt-2 mt-lg-0">
+      <div class="row py-4 justify-content-center" id="pricing">
+        <div class="col-11 col-sm-6 col-md-4 col-lg-3 mt-2 mt-lg-0">
           <div class="card shadow">
             <div class="card-body">
               <h2 class="card-title" style="font-weight: bold">LITE</h2>
@@ -177,13 +177,13 @@
                 <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Digitaler Concierge</span></div>
               </div>
               <p></p>
-              <a role="button" href="anmelden.html" class="btn anmelden" id="testbutton-0">30 Tage<br>kostenlos nutzen!</a>
+              <button type="button" href="anmelden.html" class="btn anmelden" id="testbutton-0" data-price="-1">30 Tage<br>kostenlos nutzen!</button>
             </div>
           </div>
         </div>
 
-        
-        <div class="col-10 col-sm-8 col-lg-3 mt-2 mt-lg-0">
+
+        <div class="col-11 col-sm-6 col-md-4 col-lg-3 mt-2 mt-lg-0">
           <div class="card shadow">
             <div class="card-body">
               <h2 class="card-title" style="font-weight: bold">PRO</h2>
@@ -202,12 +202,12 @@
                 <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Digitaler Concierge</span></div>
               </div>
               <p></p>
-              <a role="button" href="anmelden.html" class="btn anmelden" id="testbutton-1">30 Tage<br>kostenlos nutzen!</a>
+              <a role="button" href="anmelden.html" class="btn anmelden" id="testbutton-1" data-price="-1" >30 Tage<br>kostenlos nutzen!</a>
             </div>
           </div>
         </div>
-        
-        <div class="col-10 col-sm-8 col-lg-3 mt-2 mt-lg-0">
+
+        <div class="col-11 col-sm-6 col-md-4 col-lg-3 mt-2 mt-lg-0">
           <div class="card shadow">
             <div class="card-body">
               <h2 class="card-title" style="font-weight: bold">UNLIMITED</h2>
@@ -226,40 +226,7 @@
                 <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Digitaler Concierge</span></div>
               </div>
               <p></p>
-              <a role="button" href="anmelden.html" class="btn anmelden" id="testbutton-2">30 Tage<br>kostenlos nutzen!</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal -->
-      <div class="modal fade" id="modal-lite" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle">Anmeldung</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="row px-4">
-                Wir sind noch nicht online. Du kannst aber deine email hinterlassen damit wir dich auf dem Laufenden halten können.
-              </div>
-              <div class="row px-4">
-                <form>
-                  <div class="form-group">
-                    <!-- <label for="exampleInputEmail1">Hinterlass eine Email-Adresse und wir halten dich auf dem Laufenden</label> -->
-                    <input type="email" class="form-control" id="inputEmail" name='email' aria-describedby="emailHelp" placeholder="E-mail">
-                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                  </div>
-                  <!-- <button type="button" class="btn" id="anmelden" style="background-color: #10B201; color: #ffffff">Anmelden!</button> -->
-                </form>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" data-dismiss="modal">Anmelden</button>
+              <a role="button" href="anmelden.html" class="btn anmelden" id="testbutton-2" data-price="-1">30 Tage<br>kostenlos nutzen!</a>
             </div>
           </div>
         </div>
@@ -287,43 +254,32 @@
         
         if (Math.random() >= 0.5) {
           var prices = [0, 0.5, 1];
+          var option = 'A'
         } else {
           var prices = [1, 2.5, 5];
+          var option = 'B'
         }
 
         for (i = 0; i < prices.length; i++) { 
           $('#price-tag-' + i).text(prices[i]);
+          $('#testbutton-' + i).data('price', prices[i])
         }
 
-        // $('#anmelden').on('click', function(event) {
-        //   var formData = {
-        //     'mail': $('input[name=email]').val(),
-        //     'site_id': 'website'
-        //   };
-        //   console.log(formData);
+        $('.anmelden').on('click', function(event) {
+          var formData = {
+            'site_id': 'website',
+            'price': $(event.target).data('price'),
+            'option': option
+          }
 
-        //   $.ajax({
-        //     type: 'POST',
-        //     url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/prod/anmelden',
-        //     data: JSON.stringify(formData),
-        //     dataType: 'json',
-        //     crossDomain: true,
-        //     encode: true,
-        //     success: function(responseData, textStatus, jqXHR) {
-        //       console.log(responseData);
-        //     },
-        //     error: function (responseData, textStatus, errorThrown) {
-        //       console.warn(responseData, textStatus, errorThrown);
-        //       alert('CORS failed - ' + textStatus);
-        //     }
-        //   });
-        // });
+          console.log(event);
+          console.log($(event.target).data('price'));
+          console.log(option);
 
-        $('#testbutton-1').on('click', function(event) {
           $.ajax({
             type: 'POST',
-            url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/prod/counter',
-            data: JSON.stringify(buttonData),
+            url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/prod/activity',
+            data: JSON.stringify(formData),
             dataType: 'json',
             crossDomain: true,
             encode: true,
@@ -334,7 +290,7 @@
               console.warn(responseData, textStatus, errorThrown);
             }
           });
-          
+
         });
       });
     </script>
