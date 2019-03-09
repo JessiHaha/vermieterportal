@@ -15,8 +15,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/regular.css" integrity="sha384-IG162Tfx2WTn//TRUi9ahZHsz47lNKzYOp0b6Vv8qltVlPkub2yj9TVwzNck6GEF" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
@@ -177,7 +181,7 @@
                 <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Digitaler Concierge</span></div>
               </div>
               <p></p>
-              <button type="button" href="anmelden.html" class="btn anmelden" id="testbutton-0" data-price="-1">30 Tage<br>kostenlos nutzen!</button>
+              <a role="button" href="anmelden.html" class="btn anmelden" id="testbutton-0" data-price="-1">30 Tage<br>kostenlos nutzen!</a>
             </div>
           </div>
         </div>
@@ -243,7 +247,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
@@ -254,10 +258,10 @@
         
         if (Math.random() >= 0.5) {
           var prices = [0, 0.5, 1];
-          var option = 'A'
+          var option = 'A';
         } else {
           var prices = [1, 2.5, 5];
-          var option = 'B'
+          var option = 'B';
         }
 
         for (i = 0; i < prices.length; i++) { 
@@ -268,13 +272,11 @@
         $('.anmelden').on('click', function(event) {
           var formData = {
             'site_id': 'website',
-            'price': $(event.target).data('price'),
+            'price': $(event.target).data('price').toString(),
             'option': option
-          }
-
-          console.log(event);
-          console.log($(event.target).data('price'));
-          console.log(option);
+          };
+          
+          console.log(formData);
 
           $.ajax({
             type: 'POST',
@@ -292,6 +294,7 @@
           });
 
         });
+
       });
     </script>
   </body>
