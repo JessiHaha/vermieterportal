@@ -181,7 +181,7 @@
                 <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Digitaler Concierge</span></div>
               </div>
               <p></p>
-              <button type="button" href="anmelden.html" class="btn anmelden" id="testbutton-0" data-price="-1">30 Tage<br>kostenlos nutzen!</button>
+              <button type="button" href="anmelden.html" class="btn anmelden" id="testbutton-0" data-price="-1"><span class="spinner-border spinner-border-sm d-none" id='spinner-0' role="status" aria-hidden="true"></span>30 Tage<br>kostenlos nutzen!</button>
             </div>
           </div>
         </div>
@@ -206,7 +206,7 @@
                 <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Digitaler Concierge</span></div>
               </div>
               <p></p>
-              <button type="button" href="anmelden.html" class="btn anmelden" id="testbutton-1" data-price="-1">30 Tage<br>kostenlos nutzen!</button>
+              <button type="button" href="anmelden.html" class="btn anmelden" id="testbutton-1" data-price="-1"><span class="spinner-border spinner-border-sm d-none" id='spinner-1' role="status" aria-hidden="true"></span>30 Tage<br>kostenlos nutzen!</button>
             </div>
           </div>
         </div>
@@ -230,7 +230,7 @@
                 <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Digitaler Concierge</span></div>
               </div>
               <p></p>
-              <button type="button" href="anmelden.html" class="btn anmelden" id="testbutton-2" data-price="-1">30 Tage<br>kostenlos nutzen!</button>
+              <button type="button" href="anmelden.html" class="btn anmelden" id="testbutton-2" data-price="-1"><span class="spinner-border spinner-border-sm d-none" id='spinner-2' role="status" aria-hidden="true"></span>30 Tage<br>kostenlos nutzen!</button>
             </div>
           </div>
         </div>
@@ -278,6 +278,9 @@
           
           console.log(formData);
 
+          // activate spiner
+          $(this).find('.spinner-border').toggleClass('d-none')
+
           $.ajax({
             type: 'POST',
             url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/prod/activity',
@@ -287,13 +290,12 @@
             encode: true,
             success: function(responseData, textStatus, jqXHR) {
               console.log(responseData);
+              window.location.href = 'vportal-anmelden.html?option=' + option + '&price=' + formData['price'];
             },
             error: function(responseData, textStatus, errorThrown) {
               console.warn(responseData, textStatus, errorThrown);
             }
           });
-
-          window.location.href = 'vportal-anmelden.html';
         });
 
       });
